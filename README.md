@@ -6,6 +6,10 @@ It works well with vite, webpack, rollup and babel-plugin-import.
 
 Solve https://github.com/ant-design/ant-design/issues/9363 .
 
+## How it works
+
+It works by mapping the [global.less](https://github.com/ant-design/ant-design/blob/master/components/style/core/global.less) into an empty file: https://github.com/csr632/less-plugin-remove-antd-global-styles/blob/main/src/index.ts
+
 ## Usage
 
 ```
@@ -93,5 +97,27 @@ If you are using [babel-plugin-import](https://github.com/umijs/babel-plugin-imp
       }
     ]
   ]
+}
+```
+
+## Tips
+
+You may want to add some reasonable global styles to your own stylesheet after removing global styles from antd. For example, you probably want to keep these styles:
+
+```css
+/* your-own-global-style.css  */
+
+/* 
+pick some reasonable global styles from
+https://github.com/ant-design/ant-design/blob/master/components/style/core/global.less
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 ```
