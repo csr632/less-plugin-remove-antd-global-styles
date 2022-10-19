@@ -2,9 +2,9 @@
 
 This is a [less plugin](https://lesscss.org/tools/#plugins) that removes [ant-design global styles](https://github.com/ant-design/ant-design/blob/master/components/style/core/global.less).
 
-Solve https://github.com/ant-design/ant-design/issues/9363
+It works well with vite, webpack, rollup and babel-plugin-import.
 
-It works with [babel-plugin-import](https://github.com/umijs/babel-plugin-import).
+Solve https://github.com/ant-design/ant-design/issues/9363 .
 
 ## Usage
 
@@ -80,7 +80,7 @@ export default {
 
 ### babel-plugin-import
 
-If you are using [babel-plugin-import](https://github.com/umijs/babel-plugin-import) to do import-on-demand, you should pass `style: true` to this babel plugin. Here is a `babel.config.json` example:
+If you are using [babel-plugin-import](https://github.com/umijs/babel-plugin-import) to do import-on-demand, you should pass `style: true` to the babel plugin. Here is a `babel.config.json` example:
 
 ```json
 {
