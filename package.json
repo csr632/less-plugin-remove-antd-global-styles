@@ -1,0 +1,24 @@
+{
+  "name": "less-plugin-remove-antd-global-styles",
+  "version": "1.0.1",
+  "description": "This is a less plugin that removes ant-design global styles.",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "rm -rf ./lib ./es && tsc && tsc -p ./tsconfig-esm.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "less-plugin",
+    "antd",
+    "global styles"
+  ],
+  "author": "csr632 <632882184@qq.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/less": "^3.0.3",
+    "@types/node": "^18.11.2",
+    "less": "^4.1.3",
+    "typescript": "^4.8.4"
+  }
+}
