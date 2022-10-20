@@ -104,8 +104,8 @@ If you are using [babel-plugin-import](https://github.com/umijs/babel-plugin-imp
 
 You may want to add some reasonable global styles to your own stylesheet after removing global styles from antd. For example, you probably want to keep these styles:
 
-```css
-/* your-own-global-style.css  */
+```less
+/* your-own-global-style.less  */
 
 /* 
 pick some reasonable global styles from
@@ -118,7 +118,10 @@ https://github.com/ant-design/ant-design/blob/master/components/style/core/globa
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
+/* you can make reset styles only take effect within antd elements */
+*[class*='ant-'] {
+  a {
+    text-decoration: none;
+  }
 }
 ```
