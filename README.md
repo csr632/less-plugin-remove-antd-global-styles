@@ -18,7 +18,7 @@ npm i -D less-plugin-remove-antd-global-styles
 
 ### vite
 
-If you are using vite:
+If you are using vite, pass it to [vite config](https://vitejs.dev/config/shared-options.html#css-preprocessoroptions):
 
 ```ts
 // vite.config.ts
@@ -84,7 +84,7 @@ export default {
 
 ### babel-plugin-import
 
-If you are using [babel-plugin-import](https://github.com/umijs/babel-plugin-import) to do import-on-demand, you should pass `style: true` to the babel plugin. Here is a `babel.config.json` example:
+If you are using [babel-plugin-import](https://github.com/umijs/babel-plugin-import) to do import-on-demand, you should pass `style: true` to the babel plugin (so that it will import `.less` files instead of `.css` files). Here is a `babel.config.json` example:
 
 ```json
 {
@@ -111,6 +111,7 @@ You may want to add some reasonable global styles to your own stylesheet after r
 pick some reasonable global styles from
 https://github.com/ant-design/ant-design/blob/master/components/style/core/global.less
 */
+
 *,
 *::before,
 *::after {
