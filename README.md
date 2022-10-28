@@ -54,12 +54,15 @@ module.exports = {
           plugins: [
             new LessPluginRemoveAntdGlobalStyles(),
           ],
+          javascriptEnabled: true,
         },
       },
     },
   ...
 };
 ```
+
+Stackblitz demo: https://stackblitz.com/edit/webpack-5-react-starter-exaaw5?file=webpack.config.js
 
 ### rollup
 
